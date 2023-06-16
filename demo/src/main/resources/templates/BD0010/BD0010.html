@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</html>
+<body>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <table style="border:solid 1px black;">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>날짜</th>
+                <th>조회수</th>
+            </tr>
+        </thead>
+        <tbody>
+            <th:block th:each="board : ${item}" th:if="${not #strings.isEmpty(item)}">
+                <tr>
+                    <td><span th:text="${board.seq}"></span></td>
+                    <td><span th:text="${board.name}"></span></td>
+                    <td><span th:text="${board.price}"></span></td>
+                    <td><span th:text="${board.quantity}"></span></td>
+                    <td><span th:text="${board.quantity}"></span></td>
+                </tr>
+            </th:block>
+            <th:block th:each="num : ${#numbers.sequence(1,10-#lists.size(item))}" th:if="${10 > #lists.size(item)}">
+                <tr>
+                    <td>a</td>
+                    <td>b</td>
+                    <td>c</td>
+                    <td>d</td>
+                    <td>e</td>
+                </tr>
+            </th:block>
+        </tbody>
+    </table>
+    <input type="button" name="insert" value="등록">
+    <script>
+        $(document).ready(function(){
+            
+
+
+            $('input[name="insert"]').off('click').on('click', function(){
+            })
+        });
+    </script>
+</body>
+</html>
