@@ -5,13 +5,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class BD0010VO {
-    private int number;
+    private int id;
+    private String writer;
     private String title;
     private String content;
-    private int count;
-    private String notice;
-    private String writer;
-    private String modifier;
-    private String created;
-    private String modified;
+    private String regdate;
+    private String update_date;
+    private String delete_date;
 }

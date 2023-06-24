@@ -15,20 +15,21 @@
                 <th>제목</th>
                 <th>작성자</th>
                 <th>날짜</th>
-                <th>조회수</th>
+                <th>수정날짜</th>
+                <!-- <th>조회수</th> -->
             </tr>
         </thead>
         <tbody>
-            <th:block th:each="board : ${item}" th:if="${not #strings.isEmpty(item)}">
+            <th:block th:each="board : ${BD0010List}" th:if="${not #strings.isEmpty(BD0010List)}">
                 <tr>
-                    <td><span th:text="${board.seq}"></span></td>
-                    <td><span th:text="${board.name}"></span></td>
-                    <td><span th:text="${board.price}"></span></td>
-                    <td><span th:text="${board.quantity}"></span></td>
-                    <td><span th:text="${board.quantity}"></span></td>
+                    <td><span th:text="${board.id}"></span></td>
+                    <td><span th:text="${board.title}"></span></td>
+                    <td><span th:text="${board.writer}"></span></td>
+                    <td><span th:text="${board.regdate}"></span></td>
+                    <td><span th:text="${board.update_date}"></span></td>
                 </tr>
             </th:block>
-            <th:block th:each="num : ${#numbers.sequence(1,10-#lists.size(item))}" th:if="${10 > #lists.size(item)}">
+            <th:block th:each="num : ${#numbers.sequence(1,10-#lists.size(BD0010List))}" th:if="${10 > #lists.size(BD0010List)}">
                 <tr>
                     <td>a</td>
                     <td>b</td>
