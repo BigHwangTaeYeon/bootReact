@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boot.exam.demo.mapper.BD0010Mapper">
+
+    <select id="getBoardList" parameterType="boot.exam.demo.vo.BD0010VO" resultType="boot.exam.demo.vo.BD0010VO">
+        SELECT
+              id
+            , writer
+            , title
+            , content
+            , regdate
+            , update_date
+            , delete_date
+        FROM
+            board
+    </select>
+
+</mapper>
