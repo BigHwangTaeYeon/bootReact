@@ -1,54 +1,51 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-</html>
-<body>
-    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-    <table style="border:solid 1px black;">
-        <thead>
-            <tr>
-                <th>번호</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>날짜</th>
-                <th>수정날짜</th>
-                <!-- <th>조회수</th> -->
-            </tr>
-        </thead>
-        <tbody>
-            <th:block th:each="board : ${BD0010List}" th:if="${not #strings.isEmpty(BD0010List)}">
+<html 	xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{layout/default}">
+    <head>
+        <title>Board</title>
+    </head>
+    <div layout:fragment="content">
+        <table style="border:solid 1px black;">
+            <thead>
                 <tr>
-                    <td><span th:text="${board.id}"></span></td>
-                    <td><span th:text="${board.title}"></span></td>
-                    <td><span th:text="${board.writer}"></span></td>
-                    <td><span th:text="${board.regdate}"></span></td>
-                    <td><span th:text="${board.update_date}"></span></td>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>날짜</th>
+                    <th>수정날짜</th>
+                    <!-- <th>조회수</th> -->
                 </tr>
-            </th:block>
-            <th:block th:each="num : ${#numbers.sequence(1,10-#lists.size(BD0010List))}" th:if="${10 > #lists.size(BD0010List)}">
-                <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td>e</td>
-                </tr>
-            </th:block>
-        </tbody>
-    </table>
-    <input type="button" name="insert" value="등록">
-    <script>
-        $(document).ready(function(){
-            
-
-
-            $('input[name="insert"]').off('click').on('click', function(){
-            })
-        });
-    </script>
-</body>
+            </thead>
+            <tbody>
+                <th:block th:each="board : ${BD0010List}" th:if="${not #strings.isEmpty(BD0010List)}">
+                    <tr>
+                        <td><span th:text="${board.id}"></span></td>
+                        <td><span th:text="${board.title}"></span></td>
+                        <td><span th:text="${board.writer}"></span></td>
+                        <td><span th:text="${board.regdate}"></span></td>
+                        <td><span th:text="${board.update_date}"></span></td>
+                    </tr>
+                </th:block>
+                <th:block th:each="num : ${#numbers.sequence(1,10-#lists.size(BD0010List))}" th:if="${10 > #lists.size(BD0010List)}">
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>c</td>
+                        <td>d</td>
+                        <td>e</td>
+                    </tr>
+                </th:block>
+            </tbody>
+        </table>
+        <input type="button" name="insert" value="등록">
+        <script>
+            $(document).ready(function(){
+                $('input[name="insert"]').off('click').on('click', function(){
+                    alert("HH");
+                })
+            });
+        </script>
+    </div>
+    <!-- </body> -->
 </html>

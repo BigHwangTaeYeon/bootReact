@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html 	lang="ko" 
+        xmlns:th="http://www.thymeleaf.org" 
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+		<!-- layout의 기본 틀이 되는 html -->
+
+	<!-- [head] 영역 시작 -->
+	<head th:replace="fragments/head :: headFragment">
+		<title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">default</title>
+	</head>
+	<!-- [head] 영역 끝 -->
+
+	<body>
+        
+		<!-- [header] 영역 시작 -->
+		<header th:replace="fragments/header :: headerFragment"></header>
+		<!-- [header] 영역 끝 -->
+		
+		<!-- [content] 영역 시작 -->
+		<div layout:fragment="content"></div>
+		<!-- [content] 영역 끝 -->
+		
+		<!-- [footer] 영역 시작 -->
+		<footer th:replace="fragments/footer :: footerFragment"></footer>
+		<!-- [footer] 영역 끝 -->
+	
+	</body>
+</html>
