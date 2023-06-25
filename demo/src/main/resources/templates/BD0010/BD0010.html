@@ -6,6 +6,9 @@
         <title>Board</title>
     </head>
     <div layout:fragment="content">
+        <th:block th:each="msg : ${msgs}">
+            <p th:text="${msg}"></p>
+        </th:block>
         <table style="border:solid 1px black;">
             <thead>
                 <tr>

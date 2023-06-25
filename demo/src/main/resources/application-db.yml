@@ -1,0 +1,47 @@
+#.yml 파일은 아래와 같이  --- 를 통해 파일 분할이 가능합니다. 이로 인해 여러 환경에서 사용될 값을 하나의 파일에 작성할 수 있습니다. 😃
+
+#default 공통설정
+spring:
+    jpa:
+        show-sql: false
+logging:
+    level:
+        root: info
+        boot:
+            exam:
+                demo: DEBUG
+server:
+    servlet:
+        encoding:
+            charset: UTF-8
+    tomcat:
+        uri-encoding: UTF-8
+        
+--- # local 설정
+spring:
+    config:
+        activate:
+            on-profile: "db-local"
+    jpa:
+        show-sql: true
+    datasource:
+        url: jdbc:mariadb://localhost:3306/test
+        driver-class-name: org.mariadb.jdbc.Driver
+        username: root
+        password: root
+server:
+    port: 8030
+--- # dev 설정
+spring:
+    config:
+        activate:
+            on-profile: "db-dev"
+    jpa:
+        show-sql: true
+    datasource:
+        url: jdbc:mariadb://localhost:3306/test
+        driver-class-name: org.mariadb.jdbc.Driver
+        username: root
+        password: root
+server:
+    port: 8031
