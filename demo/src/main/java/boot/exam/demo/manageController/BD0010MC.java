@@ -6,11 +6,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class BD0010MC {
-    @PostMapping
+    @PostMapping("/getBD0010")
     public ModelAndView getBoardDetail(){
         ModelAndView mv = new ModelAndView("jsonView");
-
-        mv.addObject("board", mv);
+        
+        mv.addObject("board", "mv");
         return mv;
     }
 }

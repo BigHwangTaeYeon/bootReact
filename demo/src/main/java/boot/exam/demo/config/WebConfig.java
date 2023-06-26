@@ -10,12 +10,21 @@ import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
+import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2
 @Configuration
 public class WebConfig {
+    
+    //jsonView 빈네임 설정을 통해, jsonView가 리턴될 때, JSON형태의 데이터로 매핑
+    @Bean(name="jsonView")
+    public MappingJackson2JsonView jsonView() {
+        return new MappingJackson2JsonView();
+    }
+
+    //defaultLocaleResolver() messageSource() messageSourceAccessor() messge관련 method
     @Bean
     public LocaleResolver defaultLocaleResolver() {
         AcceptHeaderLocaleResolver localeResolver = new AcceptHeaderLocaleResolver();
@@ -24,7 +33,6 @@ public class WebConfig {
         log.info("localeResolver Bean Created.");
         return localeResolver;
     }
-
     @Bean
     public ReloadableResourceBundleMessageSource messageSource() {
         Locale.setDefault(Locale.KOREAN); // 제공하지 않는 언어로 들어왔을 때 처리
@@ -40,7 +48,6 @@ public class WebConfig {
 
         return messageSource;
     }
-
     @Bean
     public MessageSourceAccessor messageSourceAccessor (
             @Autowired ReloadableResourceBundleMessageSource messageSource) {
