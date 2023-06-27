@@ -15,13 +15,13 @@ Configutation:
         pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t][%F] %c{1} - %msg%n"
     File:
       name: File_Appender
-      fileName: ${log-path}/logfile.log
+      fileName: logs/logfile.log
       PatternLayout:
         pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t][%F] %c{1} - %msg%n"
     RollingFile:
       - name: RollingFile_Appender
-        fileName: ${log-path}/rollingfile.log
-        filePattern: "${log-path}/archive/rollingfile.log_%d{yyyy-MM-dd}.gz"
+        fileName: logs/rollingfile.log
+        filePattern: "logs/archive/rollingfile.log_%d{yyyy-MM-dd}.gz"
         PatternLayout:
           pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t][%F] %c{1} - %msg%n"
         Policies:
@@ -30,7 +30,7 @@ Configutation:
             modulate: true
         DefaultRollOverStrategy:
           Delete: 
-            basePath: "${log-path}/archive" 
+            basePath: "logs/archive" 
             maxDepth: "1" 
             IfAccumulatedFileCount: 
               exceeds: 31
