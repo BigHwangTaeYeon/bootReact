@@ -13,6 +13,7 @@ import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
 import lombok.extern.log4j.Log4j2;
+import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 
 @Log4j2
 @Configuration
@@ -24,6 +25,13 @@ public class WebConfig {
         return new MappingJackson2JsonView();
     }
 
+    // thymeleaf layout 
+    // layout-dialect를 사용하기 위해서 bean 등록을 해주어야 한다.
+	@Bean
+	public LayoutDialect layoutDialect() {
+	    return new LayoutDialect();
+	}
+    
     //defaultLocaleResolver() messageSource() messageSourceAccessor() messge관련 method
     @Bean
     public LocaleResolver defaultLocaleResolver() {

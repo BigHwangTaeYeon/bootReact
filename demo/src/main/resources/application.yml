@@ -23,3 +23,5 @@ spring:
     output:
         ansi:
             enabled: always
+logging:
+    config: classpath:log4j2.yml

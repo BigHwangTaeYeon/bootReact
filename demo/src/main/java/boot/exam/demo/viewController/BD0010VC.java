@@ -20,6 +20,7 @@ import lombok.RequiredArgsConstructor;
 public class BD0010VC {
 
 	@Resource(name="BD0010Service")
+    // @Autowired
 	private BD0010Service BD0010Service;
 
     private final MessageSourceAccessor messageSource;
