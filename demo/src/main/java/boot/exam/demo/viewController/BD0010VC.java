@@ -11,7 +11,6 @@ import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -21,6 +20,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @Controller
+@RequestMapping("/api")
 public class BD0010VC {
 
 	@Resource(name="BD0010Service")
@@ -56,13 +56,8 @@ public class BD0010VC {
 
         return "BD0010/BD0010";
     }
-
-    @GetMapping("/api/hello")
-    public String hello() {
-        return "야 이거 가져오냐 ? " + "\n";
-    }
-
-    @PostMapping("/api/ip")
+    
+    @PostMapping("/ip")
 	public ResponseEntity<String> ip (HttpServletRequest request){
 		// 요청 보낸 클라이언트 ip 반환
 		return ResponseEntity.ok(request.getRemoteAddr());

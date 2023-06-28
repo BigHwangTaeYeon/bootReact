@@ -1,28 +1,46 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import customAxios from './customAxios';
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 function App() {
-  // IP주소 변수 선언
-  const [ip, setIp] = useState('');
 
-  // IP주소 값을 설정합니다.
-  function callback(data) {
-    setIp(data);
-  }
+  const [value, setValue] = useState("");
 
-  // 첫번째 렌더링을 다 마친 후 실행합니다.
-  useEffect(
-    () => {
-      // 클라이언트의 IP주소를 알아내는 백엔드의 함수를 호출합니다.
-      customAxios('/ip', callback);
-    }, []
-  );
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://unpkg.com/lodash";
+    script.async = true;
+    document.body.appendChild(script);
+  });
 
   return (
     <div className="App">
       <header className="App-header">
-        이sdfsd 기기의 IP주소는 {ip}입니다.sdfsdf
+
+        <input value={value} onChange={({ target: { value } }) => setValue(value)} />
+
+        <p>~~ 구분선 ~~</p>
+
+        <input type="text" placeholder="아이디" value={id} onChange={appChange} />
+        <input type="password" placeholder="비밀번호" />
+        <button onClick={appClick}>로그인</button>
+        {/* <input type="button"
+          // onClick={() => {
+          // axios({
+          //   method: 'post',
+          //   url: '/api/getBD0010',
+          //   params: {
+          //     writer: '황태연'
+          //   }
+          // })
+          // .then(function (response) {
+          //   console.log(response);
+          // })
+          // .catch(function (error) {
+          //   console.log(error);
+          // });
+          // }}
+        >api 호출하기</input> */}
+
       </header>
     </div>
   );

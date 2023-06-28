@@ -1,4 +1,4 @@
-# thymeleaf
+# REACT SPRING BOOT GIT
 
 fetch pull clone 차이
 fetch
@@ -10,7 +10,7 @@ pull
 clone
     pull + git remote add 주소
 
-create table board
+create table board 
 (
     `id` INT not null auto_increment COMMENT '게시글ID', 
     `writer` VARCHAR(50) not null COMMENT '작성자', 
@@ -41,8 +41,4 @@ from
 	board
 ;
 
-
-
-
 copyReactBuildFiles processResources
-
