@@ -40,3 +40,9 @@ select
 from
 	board
 ;
+
+
+
+
+copyReactBuildFiles processResources
+

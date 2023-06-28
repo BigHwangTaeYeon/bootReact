@@ -1,62 +1,249 @@
-[INFO ] 2023-06-27 14:03:10.822 [main][StartupInfoLogger.java] DemoApplication - Starting DemoApplication using Java 11.0.19 on DESKTOP-ENE7KQ6 with PID 13720 (C:\workspace_vs\boot_thymeleaf\demo\bin\main started by admin in C:\workspace_vs\boot_thymeleaf)
-[DEBUG] 2023-06-27 14:03:10.850 [main][StartupInfoLogger.java] DemoApplication - Running with Spring Boot v2.7.13-SNAPSHOT, Spring v5.3.28
-[INFO ] 2023-06-27 14:03:10.855 [main][SpringApplication.java] DemoApplication - The following 5 profiles are active: "db", "my-service", "site", "local", "db-local"
-[INFO ] 2023-06-27 14:03:12.557 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 2023-06-27 14:03:12.598 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 0 JPA repository interfaces.
-[INFO ] 2023-06-27 14:03:13.182 [main][WebConfig.java] WebConfig - messageSource Bean Created. Default Charset is UTF-8 and Default Locale is ko
-[INFO ] 2023-06-27 14:03:13.774 [main][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port(s): 8030 (http)
-[INFO ] 2023-06-27 14:03:13.789 [main][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8030"]
-[INFO ] 2023-06-27 14:03:13.794 [main][DirectJDKLog.java] StandardService - Starting service [Tomcat]
-[INFO ] 2023-06-27 14:03:13.796 [main][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.76]
-[INFO ] 2023-06-27 14:03:14.018 [main][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 2023-06-27 14:03:14.021 [main][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2612 ms
-[INFO ] 2023-06-27 14:03:14.362 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 2023-06-27 14:03:14.505 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 2023-06-27 14:03:14.625 [main][LogHelper.java] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO ] 2023-06-27 14:03:14.766 [main][Version.java] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
-[INFO ] 2023-06-27 14:03:15.217 [main][JavaReflectionManager.java] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 2023-06-27 14:03:15.559 [main][Dialect.java] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
-[INFO ] 2023-06-27 14:03:15.941 [main][JtaPlatformInitiator.java] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 2023-06-27 14:03:15.976 [main][AbstractEntityManagerFactoryBean.java] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 2023-06-27 14:03:16.862 [main][WebConfig.java] WebConfig - localeResolver Bean Created.
-[WARN ] 2023-06-27 14:03:16.944 [main][JpaBaseConfiguration.java] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 2023-06-27 14:03:17.777 [main][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8030"]
-[INFO ] 2023-06-27 14:03:17.827 [main][TomcatWebServer.java] TomcatWebServer - Tomcat started on port(s): 8030 (http) with context path ''
-[INFO ] 2023-06-27 14:03:17.854 [main][StartupInfoLogger.java] DemoApplication - Started DemoApplication in 8.131 seconds (JVM running for 10.089)
-[INFO ] 2023-06-27 14:03:21.428 [http-nio-8030-exec-1][DirectJDKLog.java] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 2023-06-27 14:03:21.429 [http-nio-8030-exec-1][FrameworkServlet.java] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 2023-06-27 14:03:21.432 [http-nio-8030-exec-1][FrameworkServlet.java] DispatcherServlet - Completed initialization in 1 ms
-[DEBUG] 2023-06-27 14:03:21.661 [http-nio-8030-exec-1][BaseJdbcLogger.java] getBoardList - ==>  Preparing: SELECT id , writer , title , content , regdate , update_date , delete_date FROM board
-[DEBUG] 2023-06-27 14:03:21.699 [http-nio-8030-exec-1][BaseJdbcLogger.java] getBoardList - ==> Parameters: 
-[DEBUG] 2023-06-27 14:03:21.755 [http-nio-8030-exec-1][BaseJdbcLogger.java] getBoardList - <==      Total: 5
-[INFO ] 2023-06-27 14:03:54.730 [main][StartupInfoLogger.java] DemoApplication - Starting DemoApplication using Java 11.0.19 on DESKTOP-ENE7KQ6 with PID 10352 (C:\workspace_vs\boot_thymeleaf\demo\bin\main started by admin in C:\workspace_vs\boot_thymeleaf)
-[DEBUG] 2023-06-27 14:03:54.752 [main][StartupInfoLogger.java] DemoApplication - Running with Spring Boot v2.7.13-SNAPSHOT, Spring v5.3.28
-[INFO ] 2023-06-27 14:03:54.756 [main][SpringApplication.java] DemoApplication - The following 5 profiles are active: "db", "my-service", "site", "local", "db-local"
-[INFO ] 2023-06-27 14:03:56.398 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[INFO ] 2023-06-27 14:03:56.440 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
-[INFO ] 2023-06-27 14:03:57.106 [main][WebConfig.java] WebConfig - messageSource Bean Created. Default Charset is UTF-8 and Default Locale is ko
-[INFO ] 2023-06-27 14:03:57.725 [main][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port(s): 8030 (http)
-[INFO ] 2023-06-27 14:03:57.744 [main][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8030"]
-[INFO ] 2023-06-27 14:03:57.750 [main][DirectJDKLog.java] StandardService - Starting service [Tomcat]
-[INFO ] 2023-06-27 14:03:57.752 [main][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.76]
-[INFO ] 2023-06-27 14:03:57.992 [main][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
-[INFO ] 2023-06-27 14:03:57.994 [main][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2698 ms
-[INFO ] 2023-06-27 14:03:58.266 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Starting...
-[INFO ] 2023-06-27 14:03:58.389 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Start completed.
-[INFO ] 2023-06-27 14:03:58.496 [main][LogHelper.java] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-[INFO ] 2023-06-27 14:03:58.628 [main][Version.java] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
-[INFO ] 2023-06-27 14:03:59.049 [main][JavaReflectionManager.java] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-[INFO ] 2023-06-27 14:03:59.337 [main][Dialect.java] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
-[INFO ] 2023-06-27 14:03:59.694 [main][JtaPlatformInitiator.java] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[INFO ] 2023-06-27 14:03:59.719 [main][AbstractEntityManagerFactoryBean.java] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[INFO ] 2023-06-27 14:04:00.455 [main][WebConfig.java] WebConfig - localeResolver Bean Created.
-[WARN ] 2023-06-27 14:04:00.541 [main][JpaBaseConfiguration.java] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[INFO ] 2023-06-27 14:04:01.298 [main][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8030"]
-[INFO ] 2023-06-27 14:04:01.357 [main][TomcatWebServer.java] TomcatWebServer - Tomcat started on port(s): 8030 (http) with context path ''
-[INFO ] 2023-06-27 14:04:01.384 [main][StartupInfoLogger.java] DemoApplication - Started DemoApplication in 7.376 seconds (JVM running for 8.882)
-[INFO ] 2023-06-27 14:04:04.564 [http-nio-8030-exec-3][DirectJDKLog.java] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[INFO ] 2023-06-27 14:04:04.565 [http-nio-8030-exec-3][FrameworkServlet.java] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-[INFO ] 2023-06-27 14:04:04.568 [http-nio-8030-exec-3][FrameworkServlet.java] DispatcherServlet - Completed initialization in 3 ms
-[DEBUG] 2023-06-27 14:04:04.809 [http-nio-8030-exec-3][BaseJdbcLogger.java] getBoardList - ==>  Preparing: SELECT id , writer , title , content , regdate , update_date , delete_date FROM board
-[DEBUG] 2023-06-27 14:04:04.850 [http-nio-8030-exec-3][BaseJdbcLogger.java] getBoardList - ==> Parameters: 
-[DEBUG] 2023-06-27 14:04:04.912 [http-nio-8030-exec-3][BaseJdbcLogger.java] getBoardList - <==      Total: 5
+[INFO ] 2023-06-28 09:35:06.233 [main][StartupInfoLogger.java] DemoApplication - Starting DemoApplication using Java 1.8.0_371 on DESKTOP-ENE7KQ6 with PID 8752 (C:\workspace_vs\boot_thymeleaf\demo\bin\main started by admin in C:\workspace_vs\boot_thymeleaf)
+[DEBUG] 2023-06-28 09:35:06.262 [main][StartupInfoLogger.java] DemoApplication - Running with Spring Boot v2.7.13-SNAPSHOT, Spring v5.3.28
+[INFO ] 2023-06-28 09:35:06.264 [main][SpringApplication.java] DemoApplication - The following 5 profiles are active: "db", "my-service", "site", "local", "db-local"
+[INFO ] 2023-06-28 09:35:08.002 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2023-06-28 09:35:08.050 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 0 JPA repository interfaces.
+[INFO ] 2023-06-28 09:35:08.811 [main][WebConfig.java] WebConfig - messageSource Bean Created. Default Charset is UTF-8 and Default Locale is ko
+[INFO ] 2023-06-28 09:35:09.538 [main][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port(s): 8030 (http)
+[INFO ] 2023-06-28 09:35:09.555 [main][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 09:35:09.562 [main][DirectJDKLog.java] StandardService - Starting service [Tomcat]
+[INFO ] 2023-06-28 09:35:09.563 [main][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO ] 2023-06-28 09:35:09.813 [main][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2023-06-28 09:35:09.813 [main][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3059 ms
+[INFO ] 2023-06-28 09:35:10.104 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2023-06-28 09:35:10.270 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2023-06-28 09:35:10.420 [main][LogHelper.java] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2023-06-28 09:35:10.646 [main][Version.java] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO ] 2023-06-28 09:35:11.154 [main][JavaReflectionManager.java] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2023-06-28 09:35:11.648 [main][Dialect.java] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[INFO ] 2023-06-28 09:35:12.156 [main][JtaPlatformInitiator.java] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2023-06-28 09:35:12.197 [main][AbstractEntityManagerFactoryBean.java] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2023-06-28 09:35:12.727 [main][WebConfig.java] WebConfig - localeResolver Bean Created.
+[WARN ] 2023-06-28 09:35:12.858 [main][JpaBaseConfiguration.java] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2023-06-28 09:35:13.674 [main][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 09:35:13.723 [main][TomcatWebServer.java] TomcatWebServer - Tomcat started on port(s): 8030 (http) with context path ''
+[INFO ] 2023-06-28 09:35:13.749 [main][StartupInfoLogger.java] DemoApplication - Started DemoApplication in 8.255 seconds (JVM running for 10.501)
+[INFO ] 2023-06-28 09:35:42.207 [http-nio-8030-exec-1][DirectJDKLog.java] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2023-06-28 09:35:42.207 [http-nio-8030-exec-1][FrameworkServlet.java] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2023-06-28 09:35:42.211 [http-nio-8030-exec-1][FrameworkServlet.java] DispatcherServlet - Completed initialization in 3 ms
+[INFO ] 2023-06-28 10:39:11.997 [main][StartupInfoLogger.java] DemoApplication - Starting DemoApplication using Java 1.8.0_371 on DESKTOP-ENE7KQ6 with PID 9720 (C:\workspace_vs\boot_thymeleaf\demo\bin\main started by admin in C:\workspace_vs\boot_thymeleaf)
+[DEBUG] 2023-06-28 10:39:12.009 [main][StartupInfoLogger.java] DemoApplication - Running with Spring Boot v2.7.13-SNAPSHOT, Spring v5.3.28
+[INFO ] 2023-06-28 10:39:12.011 [main][SpringApplication.java] DemoApplication - The following 5 profiles are active: "db", "my-service", "site", "local", "db-local"
+[INFO ] 2023-06-28 10:39:13.098 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2023-06-28 10:39:13.126 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+[INFO ] 2023-06-28 10:39:13.508 [main][WebConfig.java] WebConfig - messageSource Bean Created. Default Charset is UTF-8 and Default Locale is ko
+[INFO ] 2023-06-28 10:39:13.933 [main][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port(s): 8030 (http)
+[INFO ] 2023-06-28 10:39:13.944 [main][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 10:39:13.948 [main][DirectJDKLog.java] StandardService - Starting service [Tomcat]
+[INFO ] 2023-06-28 10:39:13.949 [main][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO ] 2023-06-28 10:39:14.118 [main][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2023-06-28 10:39:14.119 [main][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1826 ms
+[INFO ] 2023-06-28 10:39:14.306 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2023-06-28 10:39:14.414 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2023-06-28 10:39:14.511 [main][LogHelper.java] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2023-06-28 10:39:14.605 [main][Version.java] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO ] 2023-06-28 10:39:14.963 [main][JavaReflectionManager.java] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2023-06-28 10:39:15.204 [main][Dialect.java] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[INFO ] 2023-06-28 10:39:15.508 [main][JtaPlatformInitiator.java] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2023-06-28 10:39:15.533 [main][AbstractEntityManagerFactoryBean.java] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2023-06-28 10:39:15.881 [main][WebConfig.java] WebConfig - localeResolver Bean Created.
+[WARN ] 2023-06-28 10:39:15.946 [main][JpaBaseConfiguration.java] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2023-06-28 10:39:16.425 [main][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 10:39:16.470 [main][TomcatWebServer.java] TomcatWebServer - Tomcat started on port(s): 8030 (http) with context path ''
+[INFO ] 2023-06-28 10:39:16.489 [main][StartupInfoLogger.java] DemoApplication - Started DemoApplication in 5.031 seconds (JVM running for 6.143)
+[INFO ] 2023-06-28 10:39:25.266 [http-nio-8030-exec-2][DirectJDKLog.java] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2023-06-28 10:39:25.267 [http-nio-8030-exec-2][FrameworkServlet.java] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2023-06-28 10:39:25.269 [http-nio-8030-exec-2][FrameworkServlet.java] DispatcherServlet - Completed initialization in 1 ms
+[DEBUG] 2023-06-28 10:39:25.535 [http-nio-8030-exec-2][BaseJdbcLogger.java] getBoardList - ==>  Preparing: SELECT id , writer , title , content , regdate , update_date , delete_date FROM board
+[DEBUG] 2023-06-28 10:39:25.557 [http-nio-8030-exec-2][BaseJdbcLogger.java] getBoardList - ==> Parameters: 
+[DEBUG] 2023-06-28 10:39:25.597 [http-nio-8030-exec-2][BaseJdbcLogger.java] getBoardList - <==      Total: 5
+[INFO ] 2023-06-28 10:44:51.309 [main][StartupInfoLogger.java] DemoApplication - Starting DemoApplication using Java 1.8.0_371 on DESKTOP-ENE7KQ6 with PID 7684 (C:\workspace_vs\boot_thymeleaf\demo\bin\main started by admin in C:\workspace_vs\boot_thymeleaf)
+[DEBUG] 2023-06-28 10:44:51.324 [main][StartupInfoLogger.java] DemoApplication - Running with Spring Boot v2.7.13-SNAPSHOT, Spring v5.3.28
+[INFO ] 2023-06-28 10:44:51.326 [main][SpringApplication.java] DemoApplication - The following 5 profiles are active: "db", "my-service", "site", "local", "db-local"
+[INFO ] 2023-06-28 10:44:52.332 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2023-06-28 10:44:52.364 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+[INFO ] 2023-06-28 10:44:52.986 [main][WebConfig.java] WebConfig - messageSource Bean Created. Default Charset is UTF-8 and Default Locale is ko
+[INFO ] 2023-06-28 10:44:53.533 [main][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port(s): 8030 (http)
+[INFO ] 2023-06-28 10:44:53.547 [main][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 10:44:53.553 [main][DirectJDKLog.java] StandardService - Starting service [Tomcat]
+[INFO ] 2023-06-28 10:44:53.554 [main][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO ] 2023-06-28 10:44:53.742 [main][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2023-06-28 10:44:53.743 [main][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2148 ms
+[INFO ] 2023-06-28 10:44:53.968 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2023-06-28 10:44:54.083 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2023-06-28 10:44:54.171 [main][LogHelper.java] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2023-06-28 10:44:54.271 [main][Version.java] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO ] 2023-06-28 10:44:54.726 [main][JavaReflectionManager.java] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2023-06-28 10:44:55.061 [main][Dialect.java] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[INFO ] 2023-06-28 10:44:55.429 [main][JtaPlatformInitiator.java] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2023-06-28 10:44:55.462 [main][AbstractEntityManagerFactoryBean.java] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2023-06-28 10:44:55.897 [main][WebConfig.java] WebConfig - localeResolver Bean Created.
+[WARN ] 2023-06-28 10:44:55.954 [main][JpaBaseConfiguration.java] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2023-06-28 10:44:56.505 [main][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 10:44:56.544 [main][TomcatWebServer.java] TomcatWebServer - Tomcat started on port(s): 8030 (http) with context path ''
+[INFO ] 2023-06-28 10:44:56.565 [main][StartupInfoLogger.java] DemoApplication - Started DemoApplication in 5.798 seconds (JVM running for 7.156)
+[INFO ] 2023-06-28 10:46:31.356 [http-nio-8030-exec-1][DirectJDKLog.java] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2023-06-28 10:46:31.357 [http-nio-8030-exec-1][FrameworkServlet.java] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2023-06-28 10:46:31.359 [http-nio-8030-exec-1][FrameworkServlet.java] DispatcherServlet - Completed initialization in 2 ms
+[WARN ] 2023-06-28 10:46:41.621 [http-nio-8030-exec-4][AbstractHandlerExceptionResolver.java] DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[ERROR] 2023-06-28 10:46:54.557 [http-nio-8030-exec-6][TemplateEngine.java] TemplateEngine - [THYMELEAF][http-nio-8030-exec-6] Exception processing template "야 이거 가져오냐 ?  ": Error resolving template [야 이거 가져오냐 ? 
+], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [야 이거 가져오냐 ? 
+], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1406) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1150) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[tomcat-embed-core-9.0.76.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.76.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at java.lang.Thread.run(Thread.java:750) ~[?:1.8.0_371]
+[ERROR] 2023-06-28 10:46:54.574 [http-nio-8030-exec-6][DirectJDKLog.java] [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [야 이거 가져오냐 ? 
+], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [야 이거 가져오냐 ? 
+], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:366) ~[thymeleaf-spring5-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:190) ~[thymeleaf-spring5-3.0.15.RELEASE.jar:3.0.15.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1406) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1150) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529) ~[tomcat-embed-core-9.0.76.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.28.jar:5.3.28]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623) ~[tomcat-embed-core-9.0.76.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.28.jar:5.3.28]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1791) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.76.jar:9.0.76]
+	at java.lang.Thread.run(Thread.java:750) ~[?:1.8.0_371]
+[INFO ] 2023-06-28 13:32:20.161 [main][StartupInfoLogger.java] DemoApplication - Starting DemoApplication using Java 1.8.0_371 on DESKTOP-ENE7KQ6 with PID 2932 (C:\workspace_vs\boot_thymeleaf\demo\bin\main started by admin in C:\workspace_vs\boot_thymeleaf)
+[DEBUG] 2023-06-28 13:32:20.172 [main][StartupInfoLogger.java] DemoApplication - Running with Spring Boot v2.7.13-SNAPSHOT, Spring v5.3.28
+[INFO ] 2023-06-28 13:32:20.174 [main][SpringApplication.java] DemoApplication - The following 5 profiles are active: "db", "my-service", "site", "local", "db-local"
+[INFO ] 2023-06-28 13:32:21.207 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2023-06-28 13:32:21.238 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+[INFO ] 2023-06-28 13:32:21.638 [main][WebConfig.java] WebConfig - messageSource Bean Created. Default Charset is UTF-8 and Default Locale is ko
+[INFO ] 2023-06-28 13:32:22.007 [main][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port(s): 8030 (http)
+[INFO ] 2023-06-28 13:32:22.018 [main][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 13:32:22.020 [main][DirectJDKLog.java] StandardService - Starting service [Tomcat]
+[INFO ] 2023-06-28 13:32:22.021 [main][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO ] 2023-06-28 13:32:22.175 [main][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2023-06-28 13:32:22.176 [main][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1761 ms
+[INFO ] 2023-06-28 13:32:22.348 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2023-06-28 13:32:22.460 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2023-06-28 13:32:22.550 [main][LogHelper.java] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2023-06-28 13:32:22.657 [main][Version.java] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO ] 2023-06-28 13:32:23.047 [main][JavaReflectionManager.java] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2023-06-28 13:32:23.279 [main][Dialect.java] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[INFO ] 2023-06-28 13:32:23.555 [main][JtaPlatformInitiator.java] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2023-06-28 13:32:23.577 [main][AbstractEntityManagerFactoryBean.java] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2023-06-28 13:32:23.865 [main][WebConfig.java] WebConfig - localeResolver Bean Created.
+[WARN ] 2023-06-28 13:32:23.914 [main][JpaBaseConfiguration.java] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2023-06-28 13:32:24.371 [main][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 13:32:24.406 [main][TomcatWebServer.java] TomcatWebServer - Tomcat started on port(s): 8030 (http) with context path ''
+[INFO ] 2023-06-28 13:32:24.419 [main][StartupInfoLogger.java] DemoApplication - Started DemoApplication in 4.722 seconds (JVM running for 5.731)
+[INFO ] 2023-06-28 13:32:27.760 [http-nio-8030-exec-3][DirectJDKLog.java] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2023-06-28 13:32:27.761 [http-nio-8030-exec-3][FrameworkServlet.java] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2023-06-28 13:32:27.764 [http-nio-8030-exec-3][FrameworkServlet.java] DispatcherServlet - Completed initialization in 2 ms
+[WARN ] 2023-06-28 13:32:30.306 [http-nio-8030-exec-2][AbstractHandlerExceptionResolver.java] DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+[INFO ] 2023-06-28 13:32:50.504 [main][StartupInfoLogger.java] DemoApplication - Starting DemoApplication using Java 1.8.0_371 on DESKTOP-ENE7KQ6 with PID 2292 (C:\workspace_vs\boot_thymeleaf\demo\bin\main started by admin in C:\workspace_vs\boot_thymeleaf)
+[DEBUG] 2023-06-28 13:32:50.513 [main][StartupInfoLogger.java] DemoApplication - Running with Spring Boot v2.7.13-SNAPSHOT, Spring v5.3.28
+[INFO ] 2023-06-28 13:32:50.514 [main][SpringApplication.java] DemoApplication - The following 5 profiles are active: "db", "my-service", "site", "local", "db-local"
+[INFO ] 2023-06-28 13:32:51.612 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[INFO ] 2023-06-28 13:32:51.644 [main][RepositoryConfigurationDelegate.java] RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+[INFO ] 2023-06-28 13:32:52.039 [main][WebConfig.java] WebConfig - messageSource Bean Created. Default Charset is UTF-8 and Default Locale is ko
+[INFO ] 2023-06-28 13:32:52.438 [main][TomcatWebServer.java] TomcatWebServer - Tomcat initialized with port(s): 8030 (http)
+[INFO ] 2023-06-28 13:32:52.451 [main][DirectJDKLog.java] Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 13:32:52.454 [main][DirectJDKLog.java] StandardService - Starting service [Tomcat]
+[INFO ] 2023-06-28 13:32:52.456 [main][DirectJDKLog.java] StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.76]
+[INFO ] 2023-06-28 13:32:52.615 [main][DirectJDKLog.java] [/] - Initializing Spring embedded WebApplicationContext
+[INFO ] 2023-06-28 13:32:52.616 [main][ServletWebServerApplicationContext.java] ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1859 ms
+[INFO ] 2023-06-28 13:32:52.799 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Starting...
+[INFO ] 2023-06-28 13:32:52.897 [main][HikariDataSource.java] HikariDataSource - HikariPool-1 - Start completed.
+[INFO ] 2023-06-28 13:32:52.979 [main][LogHelper.java] LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[INFO ] 2023-06-28 13:32:53.079 [main][Version.java] Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+[INFO ] 2023-06-28 13:32:53.442 [main][JavaReflectionManager.java] Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[INFO ] 2023-06-28 13:32:53.682 [main][Dialect.java] Dialect - HHH000400: Using dialect: org.hibernate.dialect.MariaDB103Dialect
+[INFO ] 2023-06-28 13:32:53.987 [main][JtaPlatformInitiator.java] JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[INFO ] 2023-06-28 13:32:54.009 [main][AbstractEntityManagerFactoryBean.java] LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[INFO ] 2023-06-28 13:32:54.304 [main][WebConfig.java] WebConfig - localeResolver Bean Created.
+[WARN ] 2023-06-28 13:32:54.355 [main][JpaBaseConfiguration.java] JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[INFO ] 2023-06-28 13:32:54.823 [main][DirectJDKLog.java] Http11NioProtocol - Starting ProtocolHandler ["http-nio-8030"]
+[INFO ] 2023-06-28 13:32:54.857 [main][TomcatWebServer.java] TomcatWebServer - Tomcat started on port(s): 8030 (http) with context path ''
+[INFO ] 2023-06-28 13:32:54.872 [main][StartupInfoLogger.java] DemoApplication - Started DemoApplication in 4.833 seconds (JVM running for 5.827)
+[INFO ] 2023-06-28 13:32:59.452 [http-nio-8030-exec-1][DirectJDKLog.java] [/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO ] 2023-06-28 13:32:59.453 [http-nio-8030-exec-1][FrameworkServlet.java] DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+[INFO ] 2023-06-28 13:32:59.456 [http-nio-8030-exec-1][FrameworkServlet.java] DispatcherServlet - Completed initialization in 2 ms

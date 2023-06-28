@@ -6,7 +6,7 @@ plugins {
 
 group = 'boot.exam'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '1.8'
 
 configurations {
 	compileOnly {
@@ -42,3 +42,56 @@ dependencies {
 // tasks.named('test') {
 // 	useJUnitPlatform()
 // }
+
+	// react CI/CD환경 구축 / 프로젝트 패키지화
+def frontendDir = "$projectDir/frontend"
+				// npm create-react-app frontend로 react 만들 때 붙여진 이름을 위치로 지정한다.
+				// $projectDir 은, boot의 demo file이며, 그 안에 gradlew 파일이 있다.
+				// gradlew build 시, react 파일인 frontend 경로를 잘 지정해주어야 한다.
+sourceSets {
+	main {
+		resources {
+			srcDirs = ["$projectDir/src/main/resources"]
+		}
+	}
+}
+
+processResources {
+	dependsOn "copyReactBuildFiles"
+}
+
+task installReact(type: Exec) {
+	workingDir "$frontendDir"
+	inputs.dir "$frontendDir"
+	group = BasePlugin.BUILD_GROUP
+	if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+		commandLine "npm.cmd", "audit", "fix"
+		commandLine 'npm.cmd', 'install'
+	} else {
+		commandLine "npm", "audit", "fix"
+		commandLine 'npm', 'install'
+	}
+}
+
+task buildReact(type: Exec) {
+	dependsOn "installReact"
+	workingDir "$frontendDir"
+	inputs.dir "$frontendDir"
+	group = BasePlugin.BUILD_GROUP
+	if (System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')) {
+		commandLine "npm.cmd", "run-script", "build"
+	} else {
+		commandLine "npm", "run-script", "build"
+	}
+}
+
+task copyReactBuildFiles(type: Copy) {
+	dependsOn "buildReact"
+	from "$frontendDir/build"
+	into "$buildDir/resources/main/static"
+}
+// boot, react 프로젝트가 하나의 패키지로  build 구성 완료
+
+tasks.bootJar {
+    dependsOn "copyReactBuildFiles"
+}

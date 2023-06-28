@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.MessageSourceAccessor;
 import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.web.servlet.LocaleResolver;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import org.springframework.web.servlet.view.json.MappingJackson2JsonView;
 
@@ -17,8 +19,18 @@ import nz.net.ultraq.thymeleaf.layoutdialect.LayoutDialect;
 
 @Log4j2
 @Configuration
-public class WebConfig {
+public class WebConfig implements WebMvcConfigurer {
     
+	/*
+	 * REACT 연동 시,
+     * 개발환경에서의 크로스 도메인 이슈 해결을 위한 코드. 운영 배포 시 14~15행 주석
+	 */
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/api/**").allowCredentials(true).allowedOrigins("http://localhost:3000");
+		WebMvcConfigurer.super.addCorsMappings(registry);
+	}
+
     //jsonView 빈네임 설정을 통해, jsonView가 리턴될 때, JSON형태의 데이터로 매핑
     @Bean(name="jsonView")
     public MappingJackson2JsonView jsonView() {
