@@ -10,6 +10,8 @@ pull
 clone
     pull + git remote add 주소
 
+# TABLE
+
 create table board 
 (
     `id` INT not null auto_increment COMMENT '게시글ID', 
@@ -40,5 +42,3 @@ select
 from
 	board
 ;
-
-copyReactBuildFiles processResources
