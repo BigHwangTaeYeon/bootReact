@@ -12,6 +12,7 @@ import lombok.Setter;
 
 @Service("BD0010Service")
 public class BD0010ServiceImple implements BD0010Service{
+    
     @Setter(onMethod_ = {@Autowired})
     private BD0010Mapper BD0010Mapper;
 

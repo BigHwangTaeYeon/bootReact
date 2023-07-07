@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boot.exam.demo.mapper.LG0010Mapper">
+
+    <select id="login" parameterType="boot.exam.demo.vo.LG0010VO" resultType="boot.exam.demo.vo.LG0010VO">
+        SELECT
+              LOGINID
+            , PASSWORD
+        FROM
+            LOGIN
+        WHERE
+            1=1
+            AND LOGINID = #{loginId}
+            AND PASSWORD = #{password}
+    </select>
+
+</mapper>
+

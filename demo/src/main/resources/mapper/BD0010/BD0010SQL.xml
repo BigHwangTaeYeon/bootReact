@@ -4,20 +4,21 @@
 
     <select id="getBoardList" parameterType="boot.exam.demo.vo.BD0010VO" resultType="boot.exam.demo.vo.BD0010VO">
         SELECT
-              id
-            , writer
-            , title
-            , content
-            , regdate
-            , update_date
-            , delete_date
+              ID
+            , WRITER
+            , TITLE
+            , CONTENT
+            , REGDATE
+            , UPDATE_DATE
+            , DELETE_DATE
         FROM
-            board
+            BOARD
         WHERE
             1=1
             <if test='writer != null  and writer != ""'>
-                AND writer = #{writer}
+                AND WRITER = #{writer}
             </if>
     </select>
-
+    
 </mapper>
+
