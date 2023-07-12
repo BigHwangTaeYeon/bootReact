@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.context.support.MessageSourceAccessor;
@@ -14,8 +15,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.SessionAttribute;
 
 import boot.exam.demo.config.SessionConst;
+import boot.exam.demo.config.SessionManager;
 import boot.exam.demo.service.BD0010Service;
 import boot.exam.demo.vo.BD0010VO;
 import boot.exam.demo.vo.LG0010VO;
@@ -30,17 +33,30 @@ public class BD0010VC {
     // @Autowired
 	private BD0010Service BD0010Service;
 
+	@Resource(name="sessionManager")
+	private SessionManager sessionManager;
+    
     private final MessageSourceAccessor messageSource;
 
     @RequestMapping("/BD0010")
-    public String getList(HttpServletRequest request, Model model, BD0010VO vo, Locale locale) {
+    public String getList(HttpServletRequest request, Model model, BD0010VO vo, Locale locale, HttpServletResponse response,
+        @SessionAttribute(name = SessionConst.LOGIN_MEMBER, required = false) LG0010VO SALG0010VO) {
         List<BD0010VO> BD0010List = BD0010Service.getBoardList(vo);
+
+        //Servlet HTTP SESSION @SessionAttribute - Session을 가져오기만 할 뿐, 생성하지 않는다
+        
+
+        //Servlet HTTP SESSION
         HttpSession session = request.getSession(false);
         LG0010VO loginMember = (LG0010VO)session.getAttribute(SessionConst.LOGIN_MEMBER);
         model.addAttribute("member", loginMember);
 
-        String[] replaceValues = new String[]{"바인딩변수1번값", "바인딩변수2번값"};
+        //SessionManager
+        LG0010VO SMloginMember = (LG0010VO)sessionManager.getSession(request);
+        model.addAttribute("SMloginMember", SMloginMember);
 
+        String[] replaceValues = new String[]{"바인딩변수1번값", "바인딩변수2번값"};
+ 
         ArrayList<String> msgs = new ArrayList<>();
         msgs.add(messageSource.getMessage("test"));
         msgs.add(messageSource.getMessage("like.this.comma.ok"));
